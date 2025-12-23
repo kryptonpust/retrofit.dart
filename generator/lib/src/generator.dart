@@ -2076,7 +2076,7 @@ if (T != dynamic &&
   String _getEnumValueExpression(DartType enumType, String variableName) {
     return _hasToJson(enumType)
         ? '$variableName.toJson()'
-        : '$variableName.name';
+        : '$variableName.toString()';
   }
 
   /// Gets the Reference for serializing an enum value in FormData.
