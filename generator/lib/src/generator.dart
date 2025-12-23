@@ -2084,7 +2084,7 @@ if (T != dynamic &&
   Expression _getEnumValueReference(DartType enumType, String variableName) {
     return _hasToJson(enumType)
         ? refer(variableName).property('toJson').call([])
-        : refer(variableName).property('toString');
+        : refer(variableName).property('toString').call([]);
   }
 
   /// Generates the query parameters code block.
